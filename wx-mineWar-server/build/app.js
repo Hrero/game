@@ -1,26 +1,20 @@
+"use strict";
 // import express, { Application, Request, Response, NextFunction } from "express";
-
 // var http = require('http');
-
 // const app: Application = express();
-
 // // app.get("/", (req: Request, res: Response, next: NextFunction) => {
 // //   res.send("Hello World!");
 // // });
-
 // var server = http.createServer(app);
-
 // const io = require('socket.io')(server)
-
 // io.on('connection', (socket: any) => {
 //   console.log('有一个客户端连接了服务器：', socket)
 // })
-
 // server.listen(7071, function () {
 //   console.log("Example app listening on port 7071!");
 // });
-function serveIndex (req: any, res: any) {
-  res.write(`
+function serveIndex(req, res) {
+    res.write(`
     <html>
     <head>
     <title>微信小游戏</title>
@@ -38,20 +32,16 @@ function serveIndex (req: any, res: any) {
     <footer>ELEVEN</footer>
     </body>
     </html>
-  `)
-  res.end()
+  `);
+    res.end();
 }
-
-const app = require('http').createServer(serveIndex)
-
+const app = require('http').createServer(serveIndex);
 // 创建 socket.io 服务
-const io = require('socket.io')(app)
-
+const io = require('socket.io')(app);
 // 监听 https 端口
-app.listen(7071)
-
+app.listen(7071);
 // 有客户端连接服务器
-io.on('connection', function (socket: any) {
-  console.log('有一个客户端连接了服务器：', socket)
-  // socket 代表该客户端的 socket.io 连接
-})
+io.on('connection', function (socket) {
+    console.log('有一个客户端连接了服务器：', socket);
+    // socket 代表该客户端的 socket.io 连接
+});
