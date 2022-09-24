@@ -15,7 +15,7 @@ export default class Board extends FYGE.Graphics {
   constructor() {
     super();
     this.x = 65;
-    this.y = 50;
+    this.y = 80;
     this.beginFill(0xffffff, 1);
     this.drawRect(0, 0, BOARD_SIZE, BOARD_SIZE);
     this.endFill();

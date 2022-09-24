@@ -1,7 +1,7 @@
 {
     "apps": [{
-        "name": "boke-admin-web",
-        "script": "dist/nest/main.js",
+        "name": "wx-minewar-server",
+        "script": "build/app.js",
         "node_args": "--harmony"
     }],
     "deploy": {
@@ -9,7 +9,7 @@
             "user": "root",
             "host": "121.196.178.118",
             "ref": "origin/master",
-            "repo": "git@github.com:Hrero/boke-admin-web.git",
+            "repo": "git@github.com:Hrero/wx-minewar-server.git",
             "path": "/home/node-service/wx-minewar-server",
             "post-deploy": "bash /home/node-service/wx-minewar-server/current/deploy.sh",
             "env": {

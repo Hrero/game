@@ -9,6 +9,7 @@ export const BOARD_SIZE = 622;
 export const PIECE_SIZE = 60;
 // export const minePic = 'http://file.haozengrun.com/1663853069381WechatIMG234.png'
 export const minePic = './image/WechatIMG234.png'
+export const musicPic = './image/WechatIMG236.png'
 
 export const GAP = 2;
 

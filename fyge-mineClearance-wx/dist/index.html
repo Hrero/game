@@ -51,10 +51,19 @@
         ></canvas> -->
         <canvas id="canvas" 
         ></canvas>
+        <audio src="./mine.mp3" id="audio_tag_id" controls></audio>
     </div>
 
     <script src="bundle.js"></script>
-
+    <script>
+        try {
+        var audio_file1 = document.getElementById('audio_tag_id'); 
+        // audio_file1.play();
+            
+        } catch (error) {
+            
+        }
+    </script>
 </body>
 
 </html>

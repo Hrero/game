@@ -5,6 +5,7 @@ import PieceManager from "./pieceManager";
 import { getRandomArrayElements } from "./utils";
 import { INIT_DATA, MINEMAXNUM } from "./gameconfig";
 import { TimeText } from "./element/TimeText";
+import { MusicBtn } from './element/musicBtn';
 
 export default class Game extends FYGE.Sprite {
   private board: Board;
@@ -14,6 +15,11 @@ export default class Game extends FYGE.Sprite {
     getStage().addChild(this);
     this._createBoard();
     this._createTime()
+    // this._createMusic()
+  }
+  private _createMusic() {
+    const musicBtn = new MusicBtn()
+    this.addChild(musicBtn)
   }
   private _createBoard() {
     this.board = new Board();
@@ -32,6 +38,8 @@ export default class Game extends FYGE.Sprite {
 
   private gameOver() {
     this.board.mouseChildren = false
+    // 失败文案
+    this.timeText.errorText()
   }
 
   private success() {
