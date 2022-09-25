@@ -107,7 +107,7 @@ function initSocket() {
   go.server.socket = SocketIO(CONFIG.server, {
     transports: ["websocket"],
   });
-
+  console.log(22);
   // 进入后台，断开连接
   wx.offShow(() => {
     go.server.socket.disconnect();

@@ -34,7 +34,6 @@ export default class Main {
 
     this.bindLoop = this.loop.bind(this)
     this.hasEventBind = false
-
     // 清除上一局的动画
     window.cancelAnimationFrame(this.aniId)
 
